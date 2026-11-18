@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(npx prisma validate)",
+      "Bash(npx prisma format)",
+      "Bash(npx prisma generate)",
+      "Bash(npx prisma migrate status)",
+      "Bash(npx prisma -v)",
+      "Bash(npm ls *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git ls-files *)",
+      "Bash(curl -s http://localhost:3000/*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(npx prisma migrate reset *)",
+      "Bash(npx prisma db push *)",
+      "Bash(npx prisma@latest *)",
+      "Bash(git add .env*)"
+    ],
+    "ask": [
+      "Bash(npx prisma migrate dev *)",
+      "Bash(npx prisma migrate deploy *)",
+      "Bash(npm install *)",
+      "Bash(git push *)"
+    ]
+  },
+  "enabledPlugins": {
+    "impeccable@impeccable": true
+  }
+}
